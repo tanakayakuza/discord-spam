@@ -16,5 +16,5 @@ jobs:
             curl -H "Content-Type: application/json" \
                  -d '{"content": "@everyone あゆかさいきょう卍 ('"$i"'/10)"}' \
                  $WEBHOOK_URL
-            sleep 1
+            sleep 0.7
           done
