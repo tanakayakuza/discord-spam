@@ -9,7 +9,7 @@ jobs:
   spam:
     runs-on: ubuntu-latest
     steps:
-      - name: Send messages
+      - name: @everyone あゆかていこくまんじ
         run: |
           WEBHOOK_URL="${{ secrets.DISCORD_WEBHOOK_URL }}"
           for i in {1..10}; do
