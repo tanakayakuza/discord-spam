@@ -1,0 +1,20 @@
+name: Discord Webhook 連投
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # 例: 10分ごとに実行（必要に応じて変更）
+  workflow_dispatch:        # 手動で実行できるようにする
+
+jobs:
+  spam:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send messages
+        run: |
+          WEBHOOK_URL="${{ secrets.DISCORD_WEBHOOK_URL }}"
+          for i in {1..10}; do
+            curl -H "Content-Type: application/json" \
+                 -d "{\"content\": \"GitHub Actionsから連投テスト！ ($i/10)\"}" \
+                 $WEBHOOK_URL
+            sleep 1  # 1秒間隔（レートリミット回避）
+          done
