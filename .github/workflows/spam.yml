@@ -2,7 +2,7 @@ name: Discord Webhook 連投
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/1 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -12,9 +12,9 @@ jobs:
       - name: Send messages
         run: |
           WEBHOOK_URL="${{ secrets.DISCORD_WEBHOOK_URL }}"
-          for i in {1..10}; do
+          for i in {1..999}; do
             curl -H "Content-Type: application/json" \
-                 -d '{"content": "GitHub Actionsから連投テスト！ ('"$i"'/10)"}' \
+                 -d '{"content": "@everyone あゆかさいきょう卍 ('"$i"'/10)"}' \
                  $WEBHOOK_URL
             sleep 1
           done
