@@ -14,7 +14,7 @@ jobs:
           WEBHOOK_URL="${{ secrets.DISCORD_WEBHOOK_URL }}"
           for i in {1..999}; do
             curl -H "Content-Type: application/json" \
-                 -d '{"content": "# 卍 @everyone あゆか 卍 卍 @everyone あゆか 卍 卍 @everyone あゆか 卍 卍 @everyone あゆか 卍 卍 @everyone あゆか 卍 卍 @everyone あゆか 卍 卍 @everyone あゆか 卍 卍 @everyone あゆか 卍 卍 @everyone あゆか 卍 卍 @everyone あゆか 卍 卍 @everyone あゆか 卍 ('"$i"'/10)"}' \
+                 -d '{"content": "# @everyone そうすけ ('"$i"'/10)"}' \
                  $WEBHOOK_URL
             sleep 0.7
           done
