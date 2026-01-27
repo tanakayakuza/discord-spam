@@ -12,9 +12,9 @@ jobs:
       - name: Send messages
         run: |
           WEBHOOK_URL="${{ secrets.DISCORD_WEBHOOK_URL }}"
-          for i in {1..999}; do
+          for i in {1..20}; do
             curl -H "Content-Type: application/json" \
-                 -d '{"content": "# そうすけ https://www.tiktok.com/@vz2m0?_r=1&_t=ZS-93PVXWN7TAl ('"$i"'/10)"}' \
+                 -d '{"content": "# # おつかれーろおつからー ('"$i"'/10)"}' \
                  $WEBHOOK_URL
             sleep 0.7
           done
