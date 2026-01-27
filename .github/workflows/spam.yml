@@ -1,4 +1,4 @@
-name: Discord Webhook 連投
+name: かわいそうすけｆｖ
 
 on:
   schedule:
@@ -12,9 +12,10 @@ jobs:
       - name: Send messages
         run: |
           WEBHOOK_URL="${{ secrets.DISCORD_WEBHOOK_URL }}"
-          for i in {1..20}; do
+          for i in {1..999}; do
             curl -H "Content-Type: application/json" \
-                 -d '{"content": "# おつかれーろおつからー 
+                 -d '{"content": "# おつかれーろおつからー ' \
                  $WEBHOOK_URL
             sleep 0.7
+          done
           done
