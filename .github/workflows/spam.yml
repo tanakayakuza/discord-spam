@@ -14,7 +14,7 @@ jobs:
           WEBHOOK_URL="${{ secrets.DISCORD_WEBHOOK_URL }}"
           for i in {1..999}; do
             curl -H "Content-Type: application/json" \
-                 -d '{"content": "ハッピーコハル:emoji_1:ｲｴｰｲ ('"$i"'/10)"}' \
+                 -d '{"content": "https://media.discordapp.net/attachments/1463850698218143869/1464429148523987196/IMG_4523.png?ex=697c06ec&is=697ab56c&hm=b63d865b6b9fa40c14e2b261f64f31e09ae5014f5f28f42b59391dc7bdab52bf&=&format=webp&quality=lossless&width=822&height=595　ハッピーコハルｲｴｰｲ ('"$i"'/10)"}' \
                  $WEBHOOK_URL
             sleep 0.7
           done
