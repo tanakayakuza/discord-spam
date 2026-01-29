@@ -14,7 +14,7 @@ jobs:
           WEBHOOK_URL="${{ secrets.DISCORD_WEBHOOK_URL }}"
           for i in {1..999}; do
             curl -H "Content-Type: application/json" \
-                 -d '{"content": "# さかいそうすけ https://www.tiktok.com/@vz2m0?_r=1&_t=ZS-93PVXWN7TAl ('"$i"'/10)"}' \
+                 -d '{"content": "https://media.discordapp.net/attachments/1466247249913712862/1466279334900797572/image.png?ex=697c2a8b&is=697ad90b&hm=2706f62e93fdcc05c9109d296afbf7e49e85c6190c507e89b98764a5c45a57b7&=&format=webp&quality=lossless&width=911&height=512 ('"$i"'/10)"}' \
                  $WEBHOOK_URL
             sleep 0.7
           done
